@@ -1,5 +1,5 @@
 import {cp as copy} from 'fs/promises';
-import {absolutePath} from '../../helpers/fs.js';
+import {absolutePath} from '../helpers/fs.js';
 
 export const cp = async (workDir, source, destination) => {
     try {

@@ -1,5 +1,5 @@
 import {readFile} from 'fs/promises';
-import {absolutePath} from '../../helpers/fs.js';
+import {absolutePath} from '../helpers/fs.js';
 
 export const cat = async (workDir, source) => {
     try {

@@ -1,6 +1,6 @@
 import {createInterface} from 'readline';
 import {EOL, homedir} from 'os';
-import commands from './cmd/commands.js';
+import commands from './cmd/index.js';
 
 const readline = createInterface({
     input: process.stdin,
@@ -10,8 +10,7 @@ const readline = createInterface({
 let workDir = homedir();
 
 export const execute = () => {
-    readline.question(
-        'You are currently in ' + workDir + EOL + '>',
+    readline.question('You are currently in ' + workDir + EOL + '>',
         async (input) => {
             if (input === '.exit') {
                 process.exit();

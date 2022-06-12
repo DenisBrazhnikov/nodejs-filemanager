@@ -1,5 +1,5 @@
 import {stat} from 'fs/promises';
-import {absolutePath} from '../../helpers/fs.js';
+import {absolutePath} from '../helpers/fs.js';
 
 export const cd = async (workDir, source) => {
     const path = absolutePath(workDir, source);

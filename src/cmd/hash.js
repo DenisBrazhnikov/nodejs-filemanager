@@ -1,9 +1,9 @@
 import {readFile} from 'fs/promises';
 import {createHash} from 'crypto';
 
-import {absolutePath} from '../../helpers/fs.js';
+import {absolutePath} from '../helpers/fs.js';
 
-const hash = async (workDir, source) => {
+export const hash = async (workDir, source) => {
     try {
         const hashSum = createHash('sha256');
 
@@ -14,5 +14,3 @@ const hash = async (workDir, source) => {
         return {error: e};
     }
 };
-
-export default {hash};
